@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+h1 {
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Pacifico', cursive;
+    margin:50px 80px;
+}
+p {
+    font-family: 'Pacifico', cursive;
+}
+h2 {
+    font-family: 'Pacifico', cursive;
+}
+img {
+    width: 500px;
+
+}
+body {
+    background-image: url("./image/1643130848_17-abrakadabra-fun-p-pattern-lapki-36.jpeg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro {
+    background-color: white;
+    max-width: 700px;
+    padding: 1rem;
+}
+.intro2 {
+    background-color: white;
+
+}
+.intro3 {
+    background-color: white;
+
+}
+form {
+    background-color: white;
+
+
+}
+#result {
+    font-size: 72px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: 700;
+    font-size: 30px;
+}
+select {
+    margin: 10px;
+    font-family: 'Pacifico', cursive;;
+}
+label {
+    margin: 10px;
+    font-family: 'Pacifico', cursive;;
+}
+button {
+    margin: 10px;
+    font-family: 'Pacifico', cursive;;
+}
+input {
+    font-family: 'Pacifico', cursive;;
+}
+option {
+    font-family: 'Pacifico', cursive;;
+}
+

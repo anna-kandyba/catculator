@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>catculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<h1>Сколько лет кошке по человеческим годам?</h1>
+<img src="./image/кот-с-калькулятором.jpg" alt="">
+<p class="intro">Владельцев усатых питомцев часто интересует вопрос — сколько лет кошке по человеческим меркам? У кошек, также как и у людей, существуют периоды взросления: детство, подростковый возраст, зрелость и старость. Существует несколько систем перевода кошачьих лет в человеческие. Некоторые из них позаимствованы от собачников, другие разработаны любителями-феллинологами. Первые совершенно неправильны и могут ввести в заблуждение, вторые гораздо ближе к правде. Все-таки с научной точки зрения серьезных исследований на эту тему не может быть проведено, ведь кошачьи сильно отличаются от человека. Сроки созревания сильно зависят от породы. Некоторые кошки ведут себя как взрослые уже в 2 года, другие остаются детьми и в 4-5 лет. Давайте разберемся, за сколько же человеческих лет идет 1 год жизни кошки!
+
+</p>
+<h2 class="intro3">Посчитаем?</h2>
+<form class="form" id="form">
+    <label for="mode">Режим</label>
+    <select name="mode" id="mode">
+        <option value="human">возраст человека</option>
+        <option value="feline">возраст кошки</option>
+    </select>
+
+    <label for="age">возраст</label>
+    <input id="age" type="number" min="0" max="150">
+    <button type="submit">посчитать</button>
+</form>
+
+<p class="intro2" id="result">
+
+</p>
+<script>
+    let form = document.getElementById("form");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // 1.получаем цифру из инпута.
+        // 2. получаем режим из селекта.
+        // 3а.если, режим равно хюман:
+        // 3а1. Если возраст меньше 16 - то результат равно 1
+        // 3а2. Если вораст больше 16 - то результат равно инпут - 16, делить на 7, плюс 1
+        // 3б. если режим равно филайн, то результат равно 16 плюс (инпут -1 )умножить на 7
+        // 4. выводим результат
+
+        // 1
+        let ageText = document.getElementById("age").value;
+        let age = Number.parseInt(ageText);
+        let result = 0;
+        // 2
+        let mode = document.getElementById("mode").value;
+        if (mode === "human") {
+            // 3a
+            if (age <= 16) {
+                result = 1
+            } else {
+                result = ((age - 16) / 7)+1
+            }
+        } else {
+            // 3b
+            result = 16 + ((age - 1) * 7);
+        }
+        document.getElementById("result").innerText = result;
+    });
+
+</script>
+</body>
+</html>
